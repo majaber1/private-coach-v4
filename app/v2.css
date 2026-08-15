@@ -1,0 +1,173 @@
+.navActions { display: flex; align-items: center; gap: 8px }
+.langBtn {
+  height: 38px; border: 1px solid var(--line); background: transparent;
+  color: #9a9ea3; border-radius: 999px; padding: 0 14px;
+  display: flex; align-items: center; gap: 7px; font-size: 12px;
+  cursor: pointer; transition: all var(--transition); font-weight: 500;
+}
+.langBtn:hover { border-color: #3a3d42; color: #ddd }
+.arabicLead {
+  font-family: var(--font-ar) !important;
+  color: #b8bcc0 !important; font-size: 16px !important;
+  margin-top: 12px; line-height: 1.8 !important;
+}
+
+/* ── Plan Preview (Hero Card v2) ── */
+.planPreview {
+  width: 320px; border: 1px solid rgba(255,255,255,.1);
+  border-radius: 28px; padding: 22px;
+  background: linear-gradient(180deg, #181a20, #10121a);
+  box-shadow: var(--shadow-card);
+  transform: rotate(1.5deg); transition: transform var(--transition);
+}
+.planPreview:hover { transform: rotate(0deg) scale(1.02) }
+.planHead { display: flex; justify-content: space-between; font-size: 9px; color: #5a5e64; letter-spacing: .08em }
+.planHead b { color: var(--lime); font-weight: 700 }
+.score { display: flex; align-items: center; gap: 16px; padding: 22px 0 }
+.score strong { font-size: 52px; letter-spacing: -.07em; font-weight: 800 }
+.score b, .score span { display: block }
+.score b { font-size: 12px; font-weight: 600 }
+.score span { font-size: 9px; color: #5a5e64; margin-top: 5px }
+
+.session, .coachPing {
+  display: flex; align-items: center; gap: 12px; padding: 14px;
+  background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius); transition: background var(--transition);
+}
+.session:hover, .coachPing:hover { background: rgba(255,255,255,.05) }
+.session > span { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: var(--lime); color: #111 }
+.session > div, .coachPing > div { flex: 1 }
+.session small, .session b, .session p, .coachPing b, .coachPing small { display: block }
+.session small { font-size: 8px; color: #5a5e64; letter-spacing: .08em; font-weight: 600 }
+.session b { font-size: 12px; margin: 4px 0; font-weight: 600 }
+.session p { font-size: 9px; color: #5a5e64; margin: 0 }
+.session > i { color: var(--lime) }
+.coachPing { margin-top: 10px }
+.coachPing > span {
+  width: 36px; height: 36px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #f1d292, #d4a854); color: #1a140b;
+  border-radius: 50%; font-size: 10px; font-weight: 800;
+}
+.coachPing b { font-size: 10px; font-weight: 600 }
+.coachPing small { color: #5a5e64; font-size: 9px; margin-top: 4px }
+.coachPing > svg { color: var(--lime) }
+
+/* ── Mode Strip ── */
+.modeStrip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  margin-top: 20px; background: var(--panel); overflow: hidden;
+}
+.modeStrip > div {
+  padding: 24px; border-right: 1px solid var(--line);
+  transition: background var(--transition);
+}
+.modeStrip > div:last-child { border: 0 }
+.modeStrip > div:hover { background: rgba(255,255,255,.02) }
+.modeStrip svg { color: var(--lime); width: 22px }
+.modeStrip b, .modeStrip span { display: block }
+.modeStrip b { font-size: 12px; margin: 12px 0 5px; font-weight: 600 }
+.modeStrip span { font-size: 10px; color: #6b6f74; line-height: 1.5 }
+
+/* ── Journey ── */
+.journey {
+  text-align: center; margin-top: 96px; padding: 64px 6%;
+  border: 1px solid var(--line); border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, #111418, #0d0f14);
+  position: relative; overflow: hidden;
+}
+.journey::before {
+  content: ""; position: absolute; top: -40px; left: 50%; transform: translateX(-50%);
+  width: 500px; height: 250px; border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(200,255,0,.05), transparent 70%);
+  pointer-events: none;
+}
+.journey h2 { font-size: 42px; letter-spacing: -.05em; margin: 10px 0 40px; font-weight: 700 }
+.journeyGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; text-align: left; margin-bottom: 36px }
+.journeyGrid > div {
+  position: relative; padding: 28px;
+  background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius-lg); transition: all var(--transition);
+}
+.journeyGrid > div:hover { border-color: rgba(200,255,0,.12); transform: translateY(-3px) }
+.journeyGrid i { position: absolute; right: 20px; top: 18px; color: #3a3d42; font-size: 12px; font-style: normal; font-weight: 700 }
+.journeyGrid svg { color: var(--lime) }
+.journeyGrid b, .journeyGrid p { display: block }
+.journeyGrid b { font-size: 15px; margin: 18px 0 8px; font-weight: 600 }
+.journeyGrid p { font-size: 11px; line-height: 1.7; color: #6b6f74 }
+
+/* ── Start / Quiz ── */
+.startShell { width: min(850px, 91vw); margin: auto; padding: 42px 0 100px }
+.stepTop { display: grid; grid-template-columns: 1fr auto; align-items: center; font-size: 11px; color: #6b6f74; font-weight: 500 }
+.stepTop > a { display: flex; align-items: center; gap: 7px; transition: color var(--transition) }
+.stepTop > a:hover { color: var(--lime) }
+.stepLine { grid-column: 1 / -1; height: 3px; background: #1f2125; border-radius: 9px; margin-top: 18px; overflow: hidden }
+.stepLine i { display: block; height: 100%; background: linear-gradient(90deg, var(--lime2), var(--lime)); transition: width .4s cubic-bezier(.4,0,.2,1) }
+.quiz { text-align: center; padding-top: 72px }
+.quiz h1 { font-size: 48px; letter-spacing: -.055em; margin: 14px 0; font-weight: 800 }
+.quiz > p { color: #8b8f94; font-size: 15px }
+
+.choiceGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 40px; text-align: left }
+.choiceGrid button, .modeGrid button {
+  position: relative; border: 1px solid rgba(255,255,255,.06);
+  background: var(--panel); color: #fff; border-radius: var(--radius-lg);
+  padding: 24px; text-align: left; cursor: pointer;
+  transition: all var(--transition);
+}
+.choiceGrid button:hover, .modeGrid button:hover { border-color: rgba(255,255,255,.12); background: var(--panel2) }
+.choiceGrid button.selected, .modeGrid button.selected {
+  border-color: var(--lime); box-shadow: 0 0 0 1px var(--lime), var(--shadow-glow);
+}
+.choiceGrid button > span {
+  width: 44px; height: 44px; display: grid; place-items: center;
+  border-radius: 14px; background: rgba(200,255,0,.08); color: var(--lime);
+}
+.choiceGrid b, .choiceGrid small { display: block }
+.choiceGrid b { margin: 20px 0 7px; font-weight: 600 }
+.choiceGrid small, .modeGrid small { color: #6b6f74 }
+.choiceGrid i {
+  position: absolute; right: 18px; top: 18px; width: 24px; height: 24px;
+  border-radius: 50%; background: var(--lime); color: #111;
+  display: grid; place-items: center;
+}
+.modeGrid { display: grid; gap: 10px; margin-top: 36px }
+.modeGrid button { display: flex; align-items: center; gap: 18px }
+.modeGrid button > span { color: var(--lime) }
+.modeGrid b, .modeGrid p, .modeGrid small { display: block; margin: 0 }
+.modeGrid p { font-size: 11px; color: #6b6f74; margin: 5px 0 }
+.modeGrid em {
+  margin-left: auto; color: #111; background: var(--lime);
+  padding: 5px 8px; border-radius: 99px; font-size: 8px; font-style: normal; font-weight: 800;
+}
+.quizActions { display: flex; justify-content: center; gap: 12px; margin-top: 40px }
+.quizActions button { border: 0 }
+.result { position: relative }
+.matchScore {
+  display: grid; place-items: center; margin: 0 auto 24px;
+  width: 90px; height: 90px; border-radius: 50%;
+  border: 6px solid var(--lime); font-size: 26px; font-weight: 800;
+  box-shadow: 0 0 30px rgba(200,255,0,.1);
+}
+.resultCard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 36px; text-align: left }
+.resultCard > div {
+  padding: 20px; border: 1px solid rgba(255,255,255,.06);
+  background: var(--panel); border-radius: var(--radius);
+  transition: all var(--transition);
+}
+.resultCard > div:hover { border-color: rgba(200,255,0,.1) }
+.resultCard svg { color: var(--lime) }
+.resultCard b, .resultCard span { display: block }
+.resultCard b { font-size: 11px; margin: 14px 0 6px; font-weight: 600 }
+.resultCard span { font-size: 9px; color: #6b6f74; line-height: 1.6 }
+
+@media (max-width: 700px) {
+  .langBtn { display: none }
+  .modeStrip { grid-template-columns: 1fr 1fr }
+  .modeStrip > div { border-bottom: 1px solid var(--line) }
+  .journeyGrid, .resultCard { grid-template-columns: 1fr }
+  .journey h2 { font-size: 32px }
+  .choiceGrid { grid-template-columns: 1fr }
+  .quiz { padding-top: 48px }
+  .quiz h1 { font-size: 36px }
+  .planPreview { display: none }
+}

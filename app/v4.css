@@ -1,0 +1,46 @@
+.dataStatus {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 10px; color: #6b6f74; margin-bottom: 12px; font-weight: 500;
+}
+.dataStatus i { width: 7px; height: 7px; border-radius: 50%; background: #d6a84c }
+.dataStatus.connected i { background: var(--lime); box-shadow: 0 0 8px rgba(200,255,0,.4) }
+.formError {
+  padding: 12px; border: 1px solid rgba(220,60,60,.3);
+  background: rgba(220,60,60,.08); color: #f1a7a7;
+  border-radius: 10px; font-size: 10px; margin-top: 12px;
+}
+.authSubmit:disabled { opacity: .5; cursor: wait }
+
+/* ── Smooth entrance animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px) }
+  to { opacity: 1; transform: translateY(0) }
+}
+.hero { animation: fadeUp .6s ease-out }
+.modeStrip { animation: fadeUp .6s ease-out .1s both }
+.section { animation: fadeUp .6s ease-out .15s both }
+.journey { animation: fadeUp .6s ease-out .2s both }
+
+/* ── Arabic-specific typography ── */
+[dir=rtl] h1, [dir=rtl] h2, [dir=rtl] h3,
+[dir=rtl] .hero h1, [dir=rtl] .quiz h1,
+[dir=rtl] .authPitch h1, [dir=rtl] .portalHead h1,
+[dir=rtl] .pageIntro h1 {
+  font-family: var(--font-ar);
+  letter-spacing: 0;
+}
+[dir=rtl] .eyebrow, [dir=rtl] .kicker,
+[dir=rtl] .pill, [dir=rtl] .trust,
+[dir=rtl] .modeStrip b, [dir=rtl] .modeStrip span,
+[dir=rtl] .journeyGrid b, [dir=rtl] .journeyGrid p,
+[dir=rtl] .coachCard h3, [dir=rtl] .role,
+[dir=rtl] .meta, [dir=rtl] .specialties,
+[dir=rtl] .bio p, [dir=rtl] .authCard,
+[dir=rtl] .detailsForm, [dir=rtl] .portalStats,
+[dir=rtl] .request, [dir=rtl] .agenda,
+[dir=rtl] .reviews, [dir=rtl] .privacyNote,
+[dir=rtl] .choiceGrid, [dir=rtl] .placeGrid,
+[dir=rtl] .resultCard, [dir=rtl] .footer {
+  font-family: var(--font-ar);
+}
+[dir=rtl] .heroCopy > p { font-family: var(--font-ar); line-height: 1.8 }
